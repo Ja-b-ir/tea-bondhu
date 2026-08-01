@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import {
   Leaf, Camera, Users, BookOpen, ChevronRight, Menu, X, Globe,
   ArrowRight, ScanLine, History, ShieldCheck, Bug, Sun, Droplets,
-  CheckCircle2, Github, Mail
+  CheckCircle2, Link2, Mail
 } from "lucide-react";
 
 /* ---------------------------------------------------------
@@ -610,7 +610,7 @@ export default function TeaBondhu() {
           <div>
             <h5 style={{ color: "#C3DFAE", fontSize: 13, fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.4, marginBottom: 12 }}>{t.footer.contact}</h5>
             <a href="#" style={{ display: "flex", alignItems: "center", gap: 8, color: "#A9C4A2", fontSize: 14, textDecoration: "none", marginBottom: 8 }}><Mail size={14} /> hello@teabondhu.app</a>
-            <a href="#" style={{ display: "flex", alignItems: "center", gap: 8, color: "#A9C4A2", fontSize: 14, textDecoration: "none" }}><Github size={14} /> Project repo</a>
+            <a href="#" style={{ display: "flex", alignItems: "center", gap: 8, color: "#A9C4A2", fontSize: 14, textDecoration: "none" }}><Link2 size={14} /> Project repo</a>
           </div>
         </div>
         <div style={{ borderTop: "1px solid #2B5B34", marginTop: 32, paddingTop: 20, textAlign: "center", color: "#5A7355", fontSize: 12.5 }}>
