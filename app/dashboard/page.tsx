@@ -97,7 +97,7 @@ const conditionIcon = (name: string) => {
    Main component
 --------------------------------------------------------- */
 export default function TeaBondhuDashboard() {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState<"en" | "bn">("en");
   const [tab, setTab] = useState("home"); // home | detect | history | profile
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [dragOver, setDragOver] = useState(false);
