@@ -106,7 +106,7 @@ function Field({ icon: Icon, type = "text", placeholder, value, onChange, showTo
 }
 
 export default function TeaBondhuAuth() {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState<"en" | "bn">("en");
   const [mode, setMode] = useState("login"); // 'login' | 'signup'
   const [showPw, setShowPw] = useState(false);
   const [showPw2, setShowPw2] = useState(false);

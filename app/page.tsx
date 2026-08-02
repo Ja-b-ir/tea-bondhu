@@ -244,7 +244,7 @@ function TerraceDivider({ flip = false, tone = "#F2F8ED" }) {
    Main component
 --------------------------------------------------------- */
 export default function TeaBondhu() {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState<"en" | "bn">("en");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const t = T[lang];
