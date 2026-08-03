@@ -49,7 +49,7 @@ const MEMBERS = [
   },
   {
     id: "jabir",
-    photo: "",
+    photo: "public/founder.jpg",
     isSupervisor: false,
     en: {
       name: "Md Jabir Hossain",
