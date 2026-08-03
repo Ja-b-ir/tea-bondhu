@@ -69,9 +69,9 @@ const T = {
       supervisorLabel: "Project Supervisor",
       supervisor: { name: "Omlan Jyoti Mondal", role: "Department of Computer Science" },
       members: [
-        { name: "Jabir Hossain", role: "ML Engineering & Model Training" },
-        { name: "Risha", role: "Research & Product Design" },
-        { name: "Sara", role: "Research & Documentation" },
+        { name: "Md Jabir Hossain", role: "ML Engineering & Model Training" },
+        { name: "Syada Rafia Bari Risha", role: "Research & Product Design" },
+        { name: "Sirazum Monira Sara", role: "Research & Documentation" },
       ],
     },
     blog: {
