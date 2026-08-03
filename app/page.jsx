@@ -245,6 +245,12 @@ function TerraceDivider({ flip = false, tone = "#F2F8ED" }) {
 /* ---------------------------------------------------------
    Main component
 --------------------------------------------------------- */
+const navHref = (key) => {
+  if (key === "about") return "/about";
+  if (key === "blog") return "/blog";
+  return `#${key}`;
+};
+
 export default function TeaBondhu() {
   const [lang, setLang] = useState("en");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -298,7 +304,7 @@ export default function TeaBondhu() {
 
           <nav style={{ display: "flex", gap: 28, alignItems: "center" }} className="desktop-nav">
             {["about", "how", "diseases", "team", "blog"].map((k) => (
-              <a key={k} href={`#${k}`} className="underline-grow" style={{ display: "none" }} data-nav>
+              <a key={k} href={navHref(k)} className="underline-grow" style={{ display: "none" }} data-nav>
                 {t.nav[k]}
               </a>
             ))}
@@ -335,7 +341,7 @@ export default function TeaBondhu() {
         {menuOpen && (
           <div style={{ background: "#fff", borderTop: "1px solid #DCEBD0", padding: "16px 24px", display: "flex", flexDirection: "column", gap: 14 }}>
             {["about", "how", "diseases", "team", "blog"].map((k) => (
-              <a key={k} href={`#${k}`} onClick={() => setMenuOpen(false)} style={{ color: "#1F4D2E", textDecoration: "none", fontWeight: 500 }}>{t.nav[k]}</a>
+              <a key={k} href={navHref(k)} onClick={() => setMenuOpen(false)} style={{ color: "#1F4D2E", textDecoration: "none", fontWeight: 500 }}>{t.nav[k]}</a>
             ))}
             <div style={{ display: "flex", gap: 10, marginTop: 6 }}>
               <a href="/login" style={{ flex: 1, textAlign: "center", padding: "10px", border: "1px solid #DCEBD0", borderRadius: 10, color: "#1F4D2E", textDecoration: "none", fontWeight: 600 }}>{t.nav.login}</a>
@@ -606,7 +612,7 @@ export default function TeaBondhu() {
           <div>
             <h5 style={{ color: "#C3DFAE", fontSize: 13, fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.4, marginBottom: 12 }}>{t.footer.links}</h5>
             {["about", "how", "diseases", "blog"].map((k) => (
-              <a key={k} href={`#${k}`} style={{ display: "block", color: "#A9C4A2", fontSize: 14, textDecoration: "none", marginBottom: 8 }}>{t.nav[k]}</a>
+              <a key={k} href={navHref(k)} style={{ display: "block", color: "#A9C4A2", fontSize: 14, textDecoration: "none", marginBottom: 8 }}>{t.nav[k]}</a>
             ))}
           </div>
           <div>
