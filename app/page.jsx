@@ -67,11 +67,11 @@ const T = {
       eyebrow: "Who built this",
       title: "The team behind Tea বন্ধু",
       supervisorLabel: "Project Supervisor",
-      supervisor: { name: "Omlan Jyoti Mondal", role: "Department of Computer Science" },
+      supervisor: { name: "Dr. Supervisor Name", role: "Department of Computer Science" },
       members: [
-        { name: "Md Jabir Hossain", role: "ML Engineering & Model Training" },
-        { name: "Syada Rafia Bari Risha", role: "Research & Product Design" },
-        { name: "Sirazum Monira Sara", role: "Research & Documentation" },
+        { name: "Jabir Hossain", role: "ML Engineering & Model Training" },
+        { name: "Risha", role: "Frontend & Product Design" },
+        { name: "Sara", role: "Research & Documentation" },
       ],
     },
     blog: {
@@ -151,10 +151,10 @@ const T = {
       eyebrow: "যারা তৈরি করেছেন",
       title: "Tea বন্ধুর পেছনের টিম",
       supervisorLabel: "প্রজেক্ট সুপারভাইজার",
-      supervisor: { name: "অম্লান জ্যোতি মন্ডল", role: "কম্পিউটার সায়েন্স বিভাগ" },
+      supervisor: { name: "ড. সুপারভাইজারের নাম", role: "কম্পিউটার সায়েন্স বিভাগ" },
       members: [
         { name: "জাবির হোসেন", role: "এমএল ইঞ্জিনিয়ারিং ও মডেল ট্রেনিং" },
-        { name: "রিশা", role: "রিসার্চ ও প্রোডাক্ট ডিজাইন" },
+        { name: "রিশা", role: "ফ্রন্টএন্ড ও প্রোডাক্ট ডিজাইন" },
         { name: "সারা", role: "রিসার্চ ও ডকুমেন্টেশন" },
       ],
     },
@@ -248,6 +248,7 @@ function TerraceDivider({ flip = false, tone = "#F2F8ED" }) {
 const navHref = (key) => {
   if (key === "about") return "/about";
   if (key === "blog") return "/blog";
+  if (key === "team") return "/team";
   return `#${key}`;
 };
 
