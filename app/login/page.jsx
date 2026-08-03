@@ -137,31 +137,41 @@ export default function TeaBondhuAuth() {
     }
 
     setLoading(true);
-    const supabase = createClient();
 
-    if (isLogin) {
-      const { error: signInError } = await supabase.auth.signInWithPassword({
-        email: form.email,
-        password: form.password,
-      });
-      setLoading(false);
-      if (signInError) {
-        setError(signInError.message);
-        return;
+    try {
+      const supabase = createClient();
+
+      if (isLogin) {
+        const { error: signInError } = await supabase.auth.signInWithPassword({
+          email: form.email,
+          password: form.password,
+        });
+        if (signInError) {
+          setError(signInError.message);
+          return;
+        }
+        router.push("/dashboard");
+      } else {
+        const { error: signUpError } = await supabase.auth.signUp({
+          email: form.email,
+          password: form.password,
+          options: { data: { full_name: form.name } },
+        });
+        if (signUpError) {
+          setError(signUpError.message);
+          return;
+        }
+        router.push("/dashboard");
       }
-      router.push("/dashboard");
-    } else {
-      const { error: signUpError } = await supabase.auth.signUp({
-        email: form.email,
-        password: form.password,
-        options: { data: { full_name: form.name } },
-      });
+    } catch (err) {
+      setError(
+        isBn
+          ? "কিছু ভুল হয়েছে। Supabase সংযোগ ঠিক আছে কিনা যাচাই করুন।"
+          : "Something went wrong. Check that Supabase is connected correctly (missing or invalid API keys)."
+      );
+      console.error(err);
+    } finally {
       setLoading(false);
-      if (signUpError) {
-        setError(signUpError.message);
-        return;
-      }
-      router.push("/dashboard");
     }
   };
 
