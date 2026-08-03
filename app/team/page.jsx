@@ -49,7 +49,7 @@ const MEMBERS = [
   },
   {
     id: "jabir",
-    photo: "public/founder.jpg",
+    photo: "/team/founder.jpg",
     isSupervisor: false,
     en: {
       name: "Md Jabir Hossain",
@@ -68,7 +68,7 @@ const MEMBERS = [
   },
   {
     id: "risha",
-    photo: "public/risha.jpeg",
+    photo: "/team/risha.jpeg",
     isSupervisor: false,
     en: {
       name: "Syada Rafia Bari Risha",
